@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wahyu's Portfolio</title>
+    <title>Portfolio Maljio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
-
         /* Custom CSS for animations and effects */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -16,7 +14,7 @@
         }
         
         .animate-fade-in {
-            animation: fadeIn 0,5s ease-out forwards;
+            animation: fadeIn 0.5s ease-out forwards;
         }
         
         .delay-100 { animation-delay: 0.1s; }
@@ -25,10 +23,14 @@
         .delay-400 { animation-delay: 0.4s; }
         
         .gradient-text {
-            background: linear-gradient(90deg, #2c28ff, #5f1cfc);
+            background: linear-gradient(to right, #2e4a9e, #152a52);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+        }
+
+        .custom-gradient {
+            background: linear-gradient(to right, #2e4a9e, #152a52);
         }
         
         .card-hover-effect {
@@ -51,7 +53,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(to right, #2e4a9e, #152a52);
             transition: width 0.3s ease;
         }
         
@@ -63,6 +65,13 @@
             width: 100%;
         }
         
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans antialiased text-gray-800">
@@ -107,29 +116,33 @@
     <!-- Hero Section -->
     <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
             <div class="animate-fade-in">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                   <span class="gradient-text"> Hi, I'm Wahyu Pratama</span>
+                <span class="gradient-text"> Hi, I'm Akmal Zio Muhklis</span>
                 </h1>
                 <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
-                    Backend Developer 
+                    Software Engineer 
                 </h2>
                 <p class="text-gray-500 mb-8 max-w-lg">
-                 Saya cukup menguasai pada bidang Backend Developer ini, dan saya akan menciptakan berbagai aplikasi dan web. Saya akan terus belajar hingga saya bisa menjadi mahir pada bidang Backend Developer
+                    Saya adalah siswa SMK Plus Pelita Nusantara yang berfokus pada Rekayasa Perangkat Lunak. 
+                    Saya terbuka terhadap kesempatan magang atau keterlibatan dalam proyek nyata yang dapat meningkatkan 
+                    pengalaman dan kontribusi saya di dunia industri.
                 </p>
-                <div class="flex space-x-4">
-                    
-                    <a href="#projects" class="px-6 py-3 border border-gradient-300 rounded-lg font-medium hover:bg-gray-50 transition duration-300">
-                        View Work
-                    </a>
-                </div>
+
+                <!-- Tombol dipindah ke bawah paragraf -->
+                <a href="#projects" 
+                class="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition duration-300 inline-block">
+                    View Work
+                </a>
             </div>
+
+            <!-- Profile Image -->
             <div class="animate-fade-in delay-200 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-xl opacity-30"></div>
                     <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <img src="wy.jpg" 
-                             alt="Profile" class="w-full h-full object-cover">
+                        <img src="foto_saya.jpg" alt="Profile" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -137,10 +150,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white rounded-xl shadow-sm mt-12">
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white rounded-xl shadow-sm mt-15">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold mb-2">About <span class="gradient-text">Me</span></h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+            <div class="w-20 h-1 mx-auto custom-gradient"></div>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -150,9 +163,29 @@
                         <i class="fas fa-user-graduate text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Education</h3>
-                    <p class="text-gray-600">
-                        Saya seorang siswa dari SMK Plus Pelita Nusantara. Saat ini saya berada di kelas 11
-                    </p>
+                    <div class="text-gray-600 space-y-3">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <div>
+                                <p class="font-medium">SMK Plus Pelita Nusantara</p>
+                                <p class="text-sm text-gray-500">Software Engineering • 2024 - Present</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <div>
+                                <p class="font-medium">SMP Negeri 9 Jakarta</p>
+                                <p class="text-sm text-gray-500">2021 - 2024</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <div>
+                                <p class="font-medium">SD Negeri Setu 02</p>
+                                <p class="text-sm text-gray-500">2015 - 2021</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -175,18 +208,18 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Tujuan masuk RPL</h3>
                     <p class="text-gray-600">
-                       Sebenarnya terinspirasi dari game yang saya mainkan sewaktu SMP dulu "kok orang bisa ya bikin aplikasi begini?" akhirnya nyoba deh masuk RPL dan kapan kapan mau nyoba bikin aplikasi aja sih
+                        Saya memilih jurusan Rekayasa Perangkat Lunak karena tertarik mendalami pengembangan website, pembuatan game, dan manajemen database.
                     </p>
                 </div>
             </div>
         </div>
-        
+    </section>
       
     <!-- Skills Section -->
     <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-12">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold mb-2">My <span class="gradient-text">Skills</span></h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+            <div class="w-20 h-1 mx-auto custom-gradient"></div>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -198,7 +231,7 @@
                     </div>
                     <h3 class="font-semibold mb-2">HTML5</h3>
                     <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div class="bg-orange-500 h-2 rounded-full" style="width: 65%"></div>
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 70%"></div>
                     </div>
                     <p class="text-sm text-gray-500">Intermediate</p>
                 </div>
@@ -211,7 +244,7 @@
                     </div>
                     <h3 class="font-semibold mb-2">CSS3</h3>
                     <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
                     </div>
                     <p class="text-sm text-gray-500">Intermediate</p>
                 </div>
@@ -224,12 +257,11 @@
                     </div>
                     <h3 class="font-semibold mb-2">JavaScript</h3>
                     <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 45%"></div>
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 40%"></div>
                     </div>
                     <p class="text-sm text-gray-500">Beginner</p>
                 </div>
             </div>
-            
             
             <div class="animate-fade-in delay-100 card-hover-effect">
                 <div class="bg-white p-6 rounded-xl shadow-sm h-full flex flex-col items-center text-center">
@@ -238,7 +270,7 @@
                     </div>
                     <h3 class="font-semibold mb-2">PHP</h3>
                     <div class="w-full bg-purple-200 rounded-full h-2 mb-2">
-                        <div class="bg-purple-500 h-2 rounded-full" style="width: 71%"></div>
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 60%"></div>
                     </div>
                     <p class="text-sm text-gray-500">Intermediate</p>
                 </div>
@@ -249,34 +281,77 @@
                     <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
                         <i class="fab fa-python text-3xl text-blue-600"></i>
                     </div>
-                    <h3 class="font-semibold mb-2">Phyton</h3>
+                    <h3 class="font-semibold mb-2">Python</h3>
                     <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div class="bg-blue-600 h-2 rounded-full" style="width: 34%"></div>
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 40%"></div>
                     </div>
                     <p class="text-sm text-gray-500">Beginner</p>
                 </div>
             </div>
             
+            <!-- Laravel -->
             <div class="animate-fade-in delay-300 card-hover-effect">
                 <div class="bg-white p-6 rounded-xl shadow-sm h-full flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                        <i class="fa fa-user text-3xl text-pink-500"></i>
+                        <i class="fab fa-laravel text-3xl text-red-500"></i>
                     </div>
-                    <h3 class="font-semibold mb-2">UI Design</h3>
+                    <h3 class="font-semibold mb-2">Laravel</h3>
                     <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div class="bg-pink-500 h-2 rounded-full" style="width: 119%"></div>
+                        <div class="bg-red-500 h-2 rounded-full" style="width: 50%"></div>
                     </div>
-                    <p class="text-sm text-gray-500">expert</p>
+                    <p class="text-sm text-gray-500">Intermediate</p>
                 </div>
             </div>
             
+            <!-- UI Design (Tetap dipertahankan) -->
+            <div class="animate-fade-in delay-100 card-hover-effect">
+                <div class="bg-white p-6 rounded-xl shadow-sm h-full flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-palette text-3xl text-pink-500"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">UI Design</h3>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-pink-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500">Expert</p>
+                </div>
+            </div>
+            
+            <!-- Canva -->
+            <div class="animate-fade-in delay-200 card-hover-effect">
+                <div class="bg-white p-6 rounded-xl shadow-sm h-full flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-canva text-3xl text-teal-500"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Canva</h3>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-teal-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500">Advanced</p>
+                </div>
+            </div>
+            
+            <!-- Photoshop -->
+            <div class="animate-fade-in delay-300 card-hover-effect">
+                <div class="bg-white p-6 rounded-xl shadow-sm h-full flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-adobe text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Photoshop</h3>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-blue-400 h-2 rounded-full" style="width: 50%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500">Intermediate</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50 rounded-xl mt-12">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold mb-2">My <span class="gradient-text">Projects</span></h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+            <div class="w-20 h-1 mx-auto custom-gradient"></div>
         </div>
             
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -284,29 +359,21 @@
             <div class="animate-fade-in delay-100 card-hover-effect">
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm h-full flex flex-col">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="Screenshot 2025-08-25 172207.png" 
+                        <img src="kalkulatorpy.jpg" 
                              alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="bg-blue-500 text-white text-xs font-medium px-2.5 py-0.5 rounded">Python</span>
-                            
                         </div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2">Python Kalkulator</h3>
+                        <h3 class="text-xl font-semibold mb-2">Kalkulator Python</h3>
                         <p class="text-gray-600 mb-4">
-                           sebuah projek kalkulator yang di buat dengan bahasa python
+                           Sebuah projek kalkulator yang di buat dengan menggunakan bahasa Python.
                         </p>
-
                         <a href="https://github.com/wahyupratama12/pyhton-project.git" class="text-gray-400 hover:text-gray-600">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                        <div class="flex justify-between items-center">
-                            <div class="flex space-x-2">
-                                
-                                </a>
-                            </div>
-                        </div>
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -315,99 +382,203 @@
             <div class="animate-fade-in delay-200 card-hover-effect">
                 <div class="bg-white rounded-xl overflow-hidden shadow-sm h-full flex flex-col">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="image.png" 
+                        <img src="MaljioPhone.jpg" 
                              alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="bg-green-500 text-white text-xs font-medium px-2.5 py-0.5 rounded">laravel</span>
-                            
+                            <span class="bg-red-500 text-white text-xs font-medium px-2.5 py-0.5 rounded">laravel</span>
                         </div>
                     </div>
                     <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-semibold mb-2">E-comerce</h3>
+                        <h3 class="text-xl font-semibold mb-2">Online Store</h3>
                         <p class="text-gray-600 mb-4">
-                            Sebuah project E-comerce dengan menggunakan framework laravel dan tambahan crud
+                            Sebuah project online store dengan menggunakan framework laravel dan tambahan crud.
                         </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex space-x-2">
-                                <a href="https://github.com/wahyupratama12/laravel-crud" class="text-gray-400 hover:text-gray-600">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                </a>
-                            </div>
-                        </div>
+                        <a href="https://github.com/wahyupratama12/laravel-crud" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             
             <!-- Project 3 -->
-         
-    </section>
-
-            
-            
+            <div class="animate-fade-in delay-200 card-hover-effect">
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm h-full flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="jam-digital.jpg" 
+                             alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-yellow-500 text-white text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Jam Digital</h3>
+                        <p class="text-gray-600 mb-4">
+                            Projek ini adalah jam digital sederhana yang dibuat dengan menggunakan HTML, CSS, dan JavaScript.
+                        </p>
+                        <a href="https://github.com/wahyupratama12/laravel-crud" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 mt-16">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 gradient-text">PORTFOLIO</h3>
-                    <p class="text-gray-400">
-                        Creating digital experiences that are intuitive, accessible, and delightful for users.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
-                        <li><a href="#projects" class="text-gray-400 hover:text-white transition duration-300">Projects</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Development</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">UI/UX Design</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mobile Apps</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consulting</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">
-                        Subscribe to my newsletter for the latest updates and insights.
-                    </p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
-                        <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-r-lg hover:opacity-90 transition duration-300">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">Get in <span class="gradient-text">Touch</span></h2>
+            <div class="w-20 h-1 mx-auto custom-gradient"></div>
+            <p class="text-gray-600 mt-4">Get in touch via the form below</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="animate-fade-in delay-100">
+                <form action="https://formsubmit.co/zioakmal23@gmail.com" method="POST" class="space-y-4">
+                    <input type="hidden" name="_subject" value="Pesan baru dari portfolio website!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <input type="text" name="name" placeholder="Your Name" required 
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" name="email" placeholder="Your Email" required 
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <textarea name="message" rows="5" placeholder="Your Message" required 
+                              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <button type="submit" class="custom-gradient text-white px-6 py-3 rounded-lg hover:opacity-90 transition w-full">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="animate-fade-in delay-200">
+                <div class="bg-white p-8 rounded-xl shadow-sm h-full">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">Contact Information</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Email</p>
+                                <p class="font-medium">zioakmal23@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-green-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">WhatsApp</p>
+                                <p class="font-medium">+62 858-9319-1990</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-red-500"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Address</p>
+                                <p class="font-medium">Cibinong, Bogor, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Let's Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/akmalzio" target="_blank" 
+                               class="social-icon bg-gray-800 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://wa.me/6285893191990" target="_blank" 
+                               class="social-icon bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-600">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.instagram.com/malljioo" target="_blank" 
+                               class="social-icon bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-pink-600">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
             
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
-                    &copy; 2023 Alex Johnson. All rights reserved.
+            <!-- Brand -->
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">PORTFOLIO</h3>
+                <p class="text-gray-400">
+                    Creating digital experiences that are intuitive, accessible, and delightful for users.
                 </p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-white">Home</a></li>
+                    <li><a href="#about" class="hover:text-white">About</a></li>
+                    <li><a href="#skills" class="hover:text-white">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-white">Projects</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-white text-lg font-semibold mb-4">Services</h3>
+                <ul class="space-y-2">
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Mobile Apps</li>
+                    <li>Consulting</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-white text-lg font-semibold mb-4">Newsletter</h3>
+                <p class="text-gray-400 mb-4">
+                    Subscribe to my newsletter for the latest updates and insights.
+                </p>
+            <form action="https://formsubmit.co/zioakmal23@gmail.com" method="POST" class="flex">
+                <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                <input type="hidden" name="_template" value="table">
+                <input type="email" name="email" placeholder="Your email" required
+                    class="w-full px-4 py-2 rounded-l-lg focus:outline-none text-gray-900">
+                <button type="submit" class="custom-gradient hover:bg-blue-700 px-4 py-2 rounded-r-lg text-white">
+                    ➤
+                </button>
+            </form>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-700 py-6">
+            <div class="max-w-7xl mx-auto px-6 text-center text-gray-500">
+                <p>© 2025 Akmal Zio Muhklis. All rights reserved.</p>
+                <div class="mt-2 space-x-6">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+    <button id="back-to-top" class="fixed bottom-8 right-8 custom-gradient text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
